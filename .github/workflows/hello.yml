@@ -1,0 +1,16 @@
+name: hello
+on: 
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello_world
+        run: chmod u+x hello.sh && ./hello.sh
+      - name: merge
+        run: |
+          git checkout main
+          git merge dev
+          git push origin main -f
