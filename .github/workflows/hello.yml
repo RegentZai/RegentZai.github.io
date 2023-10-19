@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: check
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: hello
       run: chmod u+x hello.sh && ./hello.sh
     - name: merge
