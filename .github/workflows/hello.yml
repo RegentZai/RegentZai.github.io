@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     steps:
+      - runs-on: ubuntu:latest
       - name: hello
         run: chmod U+X hello.sh && ./hello.sh
       - name: merge
