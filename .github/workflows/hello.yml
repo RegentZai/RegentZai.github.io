@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: hello
-      run: chmod U+X hello.sh && ./hello.sh
+      run: chmod u+x hello.sh && ./hello.sh
     - name: merge
       run: |
         git checkout main
