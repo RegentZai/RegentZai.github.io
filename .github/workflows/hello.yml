@@ -17,9 +17,9 @@ jobs:
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
-        git config pull.rebase false
         git fetch
         git pull origin main --allow-unrelated-histories
+        git config pull.rebase false
         git checkout main
         git merge
         git push origin main -f
