@@ -19,6 +19,7 @@ jobs:
         git config --global user.email "58322558@qq.com"
         git fetch
         git commit -m hello.sh
+        git pull origin main --allow-unrelated-histories
         git checkout main
         git merge
         git push origin main -f
