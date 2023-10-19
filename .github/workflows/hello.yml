@@ -5,8 +5,8 @@ on:
       - dev
 jobs:
   build:
+    runs-on: [self-hosted, "${{ inputs.chosen-os }}"]
     steps:
-    - runs-on: [self-hosted, "${{ inputs.chosen-os }}"]
     - name: hello
       run: chmod U+X hello.sh && ./hello.sh
     - name: merge
