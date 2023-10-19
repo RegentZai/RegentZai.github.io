@@ -6,11 +6,11 @@ on:
 jobs:
   build:
     steps:
-      - runs-on: [self-hosted, "${{ inputs.chosen-os }}"]
-      - name: hello
-        run: chmod U+X hello.sh && ./hello.sh
-      - name: merge
-        run: |
-          git checkout main
-          git merge
-          git push origin main -f
+    - runs-on: [self-hosted, "${{ inputs.chosen-os }}"]
+    - name: hello
+      run: chmod U+X hello.sh && ./hello.sh
+    - name: merge
+      run: |
+        git checkout main
+        git merge
+        git push origin main -f
