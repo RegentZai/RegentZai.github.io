@@ -5,7 +5,7 @@ on:
       - dev
 jobs:
   build:
-    runs-on: [self-hosted,"${{ inputs.chosen-os }}"]
+    runs-on: ubuntu:latest
     steps:
     - name: hello
       run: chmod U+X hello.sh && ./hello.sh
