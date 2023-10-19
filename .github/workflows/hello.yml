@@ -17,8 +17,8 @@ jobs:
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
-        git config --global unset https.proxy
-        git config --global unset http.proxy
+        git config --global --unset https.proxy
+        git config --global --unset http.proxy
         git fetch
         git checkout -b main2
         git checkout main
