@@ -17,6 +17,7 @@ jobs:
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
+        git fetch
         git checkout origin/main
         git merge
         git push origin main -f
