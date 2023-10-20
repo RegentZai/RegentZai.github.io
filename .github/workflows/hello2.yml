@@ -15,7 +15,6 @@ jobs:
       - name: hello
         run: chmod u+x hello.sh && ./hello.sh
       - name: merge
-        if: steps.open-pr.outputs.pr_number != ''
         uses: peter-evans/enable-pull-request-automerge@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
