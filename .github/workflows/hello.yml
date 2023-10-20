@@ -14,8 +14,7 @@ jobs:
     - name: merge
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      shell: bash
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
