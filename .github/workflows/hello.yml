@@ -1,5 +1,5 @@
 name: hello
-on: 
+on:
   push:
     branches:
       - dev
@@ -13,12 +13,16 @@ jobs:
       run: chmod u+x hello.sh && ./hello.sh
     - name: merge
       env: 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: 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
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
+        git config --global --unset https.proxy
+        git config --global --unset http.proxy
         git fetch
-        git commit -am hello.sh
+        git checkout dev
+        git checkout -b main2
         git checkout main
-        git merge dev
+        git merge main2 ----allow-unrelated-histories
+        git branch -D main2
         git push origin main -f
