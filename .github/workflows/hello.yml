@@ -18,7 +18,7 @@ jobs:
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
         git fetch
-        git checkout orgin/main
+        git checkout origin/main
         git merge --ff --allow-unrelated-histories origin/dev 
         git commit -a -m "Merge"
 
