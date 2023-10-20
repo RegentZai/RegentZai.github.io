@@ -12,9 +12,8 @@ jobs:
     - name: hello
       run: chmod u+x hello.sh && ./hello.sh
     - name: merge
-      with:
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      uses: actions/checkout@v3
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
