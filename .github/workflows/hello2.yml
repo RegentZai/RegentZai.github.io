@@ -17,6 +17,6 @@ jobs:
       - name: merge
         uses: peter-evans/enable-pull-request-automerge@v2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.open-pr.outputs.pr_number }}
           merge-method: merge
