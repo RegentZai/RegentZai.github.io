@@ -1,0 +1,21 @@
+name: hello2
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    name: merge dev to main
+    runs-on: ubuntu-latest
+    steps:
+      - name: check
+        uses: actions/checkout@v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: merge
+        if: steps.open-pr.outputs.pr_number != ''
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.open-pr.outputs.pr_number }}
+          merge-method: merge
