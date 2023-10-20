@@ -13,7 +13,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: hello
-        runs: ./hello.sh
+        run: ./hello.sh
       - name: merge
         if: steps.open-pr.outputs.pr_number != ''
         uses: peter-evans/enable-pull-request-automerge@v2
