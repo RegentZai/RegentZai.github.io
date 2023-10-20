@@ -13,7 +13,7 @@ jobs:
       run: chmod u+x hello.sh && ./hello.sh
     - name: merge
       env:
-        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
+        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
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
