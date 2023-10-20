@@ -12,7 +12,7 @@ jobs:
     - name: hello
       run: chmod u+x hello.sh && ./hello.sh
     - name: merge
-      env:
+      with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: bash
       run: |
