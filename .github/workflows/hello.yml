@@ -20,5 +20,5 @@ jobs:
         git fetch
         git checkout main
         git merge origin/dev --allow-unrelated-histories
-        git commit
+        git commit -a
 
