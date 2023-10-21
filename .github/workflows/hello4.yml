@@ -33,4 +33,3 @@ jobs:
           pr_title: 'merge'
           require_middle_branch: true
           auto_merge: true
-        
