@@ -5,9 +5,6 @@ on:
     branches:
       - dev
 
-env:
-  git_token: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,5 +28,3 @@ jobs:
           source_branch: 'dev'
           target_branch: 'main'
           pr_title: 'merge'
-          require_middle_branch: true
-          auto_merge: true
