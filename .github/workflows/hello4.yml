@@ -1,0 +1,27 @@
+name: hello4
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+    - name: check
+      uses: actions/checkout@master
+    - name: hello
+      run: chmod u+x hello.sh && ./hello.sh
+    - name: merge
+      uses: 3dwardCh3nG/github-pull-reguest@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        repo_owner: 'RegentZai'
+        repo_name: 'RegentZai.github.io'
+        source_branch: 'dev'
+        source_branch: 'main'
+        pr_title: 'merge'
+        require_middle_branch: true
+        auto_merge: true
+        
