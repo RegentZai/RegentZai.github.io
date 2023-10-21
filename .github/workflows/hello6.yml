@@ -13,11 +13,12 @@ jobs:
       run: chmod +x hello.sh && ./hello.sh
     - name: merge
       env:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
       run: |
         git config --global user.name "RegentZai"
         git config --global user.email "58322558@qq.com"
         git fetch
         git checkout origin/main
         git merge --allow-unrelated-histories -m "merge" dev
+        git checkout main
         git push --force main
