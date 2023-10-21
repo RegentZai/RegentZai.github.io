@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2.3.4
       - name: hello
         run: chmod u+x hello.sh && ./hello.sh
       - name: message
