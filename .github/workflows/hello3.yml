@@ -17,7 +17,7 @@ jobs:
           
       - name: hub
         run : |
-          sudo apr install hub
+          sudo apt install hub
 
       # https://github.com/marketplace/actions/github-pull-request-action
       - name: create pull request
