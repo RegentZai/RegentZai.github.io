@@ -25,6 +25,10 @@ jobs:
           pr_body: "Automated Pull Request"
           pr_reviewer: "RegentZai"
           pr_assignee: "RegentZai"
+          
+      - name: hub
+        run : |
+          sudo apr install hub
 
       # https://github.com/marketplace/actions/enable-pull-request-automerge
       - name: enable automerge
