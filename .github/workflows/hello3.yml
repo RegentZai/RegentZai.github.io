@@ -18,7 +18,7 @@ jobs:
       # https://github.com/marketplace/actions/github-pull-request-action
       - name: create pull request
         id: open-pr
-        uses: repo-sync/pull-request@v3
+        uses: repo-sync/pull-request@v2
         with:
           destination_branch: ${{ github.event.repository.default_branch }}
           pr_title: "Merge dev into main"
