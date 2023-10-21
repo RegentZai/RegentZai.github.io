@@ -1,0 +1,19 @@
+name: hello
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check
+      uses: actions/checkout@v3
+    - name: hello
+      run: chmod +x hello.sh && ./hello.sh
+    - name: merge
+      run: |
+        git checkout main
+        git merge dev -m "merge"
+        git push --force main
+
