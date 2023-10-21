@@ -5,6 +5,9 @@ on:
     branches:
       - dev
 
+env:
+  git_token: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
