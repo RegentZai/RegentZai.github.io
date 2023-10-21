@@ -28,3 +28,4 @@ jobs:
           source_branch: 'dev'
           target_branch: 'main'
           pr_title: 'merge'
+          
