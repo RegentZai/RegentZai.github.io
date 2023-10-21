@@ -15,5 +15,5 @@ jobs:
       run: |
         git fetch
         git checkout origin/main
-        git merge dev -m "merge"
+        git merge --allow-unrelated-histories -m "merge" dev
         git push --force main
