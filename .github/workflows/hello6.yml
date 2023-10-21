@@ -13,6 +13,7 @@ jobs:
       run: chmod +x hello.sh && ./hello.sh
     - name: merge
       run: |
+        git fetch
         git checkout main
         git merge dev -m "merge"
         git push --force main
