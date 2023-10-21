@@ -24,7 +24,7 @@ jobs:
         id: open-pr
         uses: repo-sync/pull-request@v2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           destination_branch: main
           pr_title: "Merge dev into main"
           pr_body: "Automated Pull Request"
