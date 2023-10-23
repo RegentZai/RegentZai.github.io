@@ -13,6 +13,7 @@ jobs:
       - name: pack
         run: |
           npm install -g hexo-cli
+          nmp install
           hexo generate
       - name: push
         run: |
