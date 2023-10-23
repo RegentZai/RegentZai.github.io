@@ -1,19 +1,19 @@
 name: deploy
-on: [pull_request]
+on : [pull_request]
 jobs:
   pack:
     runs-on: ubuntu-latest
     steps:
       - name: check
         uses: actions/checkout@v4
-      - name: Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "14.x"
       - name: pack
         run: |
           npm install -g hexo-cli
-          nmp install
+          npm install
           hexo generate
       - name: push
         run: |
