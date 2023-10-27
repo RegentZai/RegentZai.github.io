@@ -14,6 +14,6 @@ jobs:
           git checkout main
           git config --global user.email "58322558@qq.com"
           git config --global user.name "RegentZai"
-          git merge --no-ff --allow-unrelated-histories dev
+          git merge --no-ff --allow-unrelated-histories origin/dev
           git push
           git push origin main
