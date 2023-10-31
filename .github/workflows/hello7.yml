@@ -6,14 +6,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: hello_and_merge
+      - name: merge
         run: |
           git fetch
-          chmod +x hello.sh
-          ./hello.sh 
           git checkout main
           git config --global user.email "58322558@qq.com"
           git config --global user.name "RegentZai"
           git merge --no-ff --allow-unrelated-histories dev
-          git push
           git push origin main
